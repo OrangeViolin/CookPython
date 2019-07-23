@@ -10,11 +10,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/regex">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Json.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -54,7 +49,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -66,6 +60,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -100,6 +95,7 @@
       <updated>1563890342627</updated>
       <workItem from="1563890348278" duration="1404000" />
       <workItem from="1563894393534" duration="171000" />
+      <workItem from="1563894731829" duration="233000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -136,16 +132,31 @@
       <option name="project" value="LOCAL" />
       <updated>1563894446605</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add new file">
+      <created>1563894787639</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1563894787639</updated>
+    </task>
+    <task id="LOCAL-00007" summary="change file tpye">
+      <created>1563894880461</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563894880461</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1575000" />
+    <option name="totallyTimeSpent" value="1808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="716" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -174,10 +185,11 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add new file" />
     <MESSAGE value="添加文档状态" />
     <MESSAGE value="变为英文格式" />
-    <option name="LAST_COMMIT_MESSAGE" value="变为英文格式" />
+    <MESSAGE value="add new file" />
+    <MESSAGE value="change file tpye" />
+    <option name="LAST_COMMIT_MESSAGE" value="change file tpye" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/regex">
