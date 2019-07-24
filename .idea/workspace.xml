@@ -49,6 +49,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -60,7 +61,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -96,6 +96,7 @@
       <workItem from="1563890348278" duration="1404000" />
       <workItem from="1563894393534" duration="171000" />
       <workItem from="1563894731829" duration="233000" />
+      <workItem from="1563896630231" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -150,13 +151,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1808000" />
+    <option name="totallyTimeSpent" value="1890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="716" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -192,9 +192,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="change file tpye" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/regex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/regex" />
     <entry file="file://$PROJECT_DIR$/Json.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
