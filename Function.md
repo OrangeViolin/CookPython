@@ -13,7 +13,7 @@
 
 ## 函数的定义
 
-**函数，实际上是可被调用的完整的程序。**它具备输入、处理、输出的功能。又因为它经常在主程序里被调用，所以它总像是个子程序。
+**函数，实际上是可被调用的完整的程序。是带名字的代码块**它具备输入、处理、输出的功能。又因为它经常在主程序里被调用，所以它总像是个子程序。
 
 了解一个函数，无非是要了解两个方面
 
@@ -57,7 +57,7 @@ print() 这个函数的返回值是 None 但向屏幕输出的内容即输入的
 
 一个函数内部什么都不干，也得有个名字，然后名字后面要加上圆括号（），以明示它是个函数，而不是某个变量。
 
-定义一个函数的关键字是 def，圆括号内为空即一个什么都不干的函数。
+定义一个函数的关键字是 def（define 定义），圆括号内为空即一个什么都不干的函数。
 
 ```
 def do_anything():
@@ -107,6 +107,14 @@ print(add)
 6
 9
 ```
+
+为什么 第二行 num 的输出结果是 6，按道理说，showplus(6)是执行了 showplus(x)这个函数的结果赋值给 num，而 add 是 num 的结果加上 2，如果前一个结果是 6 那么为什么后一个结果是 9 而不是 8？
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1g5riybrmumj30ry0de3zk.jpg)
+
+
+
+我在代码里执行了一遍，发现可能是这样的
 
 隐含 return None 举例：
 
@@ -212,9 +220,183 @@ print(n)还是 1，为啥？
 
 然而，全局变量 n 的值并没有被改变，因为局部变量 n（它的值是 2）和全局变量 n（它的值还是 1）只不过是名字相同而已，但它们并不是同一个变量。
 
+## 可以接受一系列值的位置参数
+
+如果你在定义参数的时候，在一个*位置参数*（Positional Arguments）前面标注了星号，`*`，那么，这个位置参数可以接收一系列值，在函数内部可以对这一系列值用 `for ... in ...` 循环进行逐一的处理。
+
+带一个星号的参数，英文名称是 “Arbitrary Positional Arguments”，姑且翻译为 “随意的位置参数”。
+
+带两个星号的参数，英文名称是 “Arbitrary Keyword Arguments”，姑且翻译为 “随意的关键字参数”。
+
+![](https://ws3.sinaimg.cn/large/006tNc79ly1g5rg98c0a8j30cb05kdg1.jpg)
+
+为 `for name in names`注明：在定义可以接收一系列值的位置参数时，建议在函数内部为该变量命名时总是用**复数**，因为函数内部，总是需要 `for` 循环去迭代元组中的元素，这样的时候，名称的复数形式对代码的可读性很有帮助。
+
+解释代码：
+
+say_hi()` 这一行没有任何输出。因为你在调用函数的时候，没有给它传递任何值，于是，在函数内部代码执行的时候，`name in names` 的值是 `False`，所以，`for` 循环内部的代码没有被执行。
+
+在函数内部，是把 `names` 这个参数当作容器处理的 —— 否则也没办法用 `for ... in ...` 来处理。而在调用函数的时候，我们是可以将一个容器传递给函数的 Arbitrary Positional Arguments 的 —— 做法是，在调用函数的时候，在参数前面加上星号 `*`
+
+```python
+def say_hi(*names):
+    for name in names:
+        print(f'Hi, {name}!')
+
+names = ('mike', 'john', 'zeo')
+say_hi(*names)
+```
+
+    Hi, mike!
+    Hi, john!
+    Hi, zeo!
+实际上，因为以上的 `say_hi(*names)` 函数内部就是把接收到的参数当作容器处理的，于是，在调用这个函数的时候，向它传递任何容器都会被同样处理：
+
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g5rgik4nlnj30fq0i0q4t.jpg)
+
+每一个都会拆分出来，为啥？
+
+拓展：什么是容器？
+
+**注意**：一个函数中，可以接收一系列值的位置参数只能有一个；并且若是还有其它位置参数存在，那就必须把这个可以接收一系列值的位置参数排在所有其它位置参数之后。
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1g5rh6lalj1j30dr02xdfw.jpg)
 
 
 
+## 为函数的某些参数设定默认值
+
+可以在定义函数的时候，为某些参数设定默认值，这些有默认值的参数，又被称作关键字参数（Keyword Argumen）
+
+![](https://ws4.sinaimg.cn/large/006tNc79ly1g5rhjs4xx9j30ij0amdh3.jpg)
+
+在第二次输入的时候我变更了一下关键词参数的默认值。
+
+以及，在第一次写的时候，我没有把`print()`放在`for name in names`这个条件语句下，所以 就没有办法循环了，注意位置呀！
+
+## 可以接受一系列之的关键字参数
+
+可以接收很多值的关键字参数（Arbitrary Keyword Argument）。
+
+![](https://ws3.sinaimg.cn/large/006tNc79ly1g5rhxmkmh3j30ex041wep.jpg)
+
+好神奇，还可以这样设定参数的啊！
+
+这是什么数据类型！
+
+既然在函数内部，我们在处理接收到的 Arbitrary Keyword Argument 时，用的是**对字典的迭代方式**，那么，在调用函数的时候，也可以直接使用字典的形式：
+
+![](https://ws3.sinaimg.cn/large/006tNc79ly1g5ri21f0c4j30ke06ogmb.jpg)
+
+为什么输出的结果是一样的？
+
+![](https://ws4.sinaimg.cn/large/006tNc79ly1g5ri3q7623j30z00esdhu.jpg)
+
+这个没看懂为什么这样处理。
 
 
 
+## 函数定义时各种参数的排列顺序
+
+在定义函数的时候，各种不同类型的参数应该按什么顺序摆放呢？对于之前写过的 `say_hi()` 这个函数，
+
+```python
+def say_hi(greeting, *names, capitalized=False):
+    for name in names:
+        if capitalized:
+            name = name.capitalize()
+        print(f'{greeting}, {name}!')
+
+say_hi('Hi', 'mike', 'john', 'zeo')
+say_hi('Welcome', 'mike', 'john', 'zeo', capitalized=True)
+```
+
+    Hi, mike!
+    Hi, john!
+    Hi, zeo!
+    Welcome, Mike!
+    Welcome, John!
+    Welcome, Zeo!
+
+如果，你想给其中的 `greeting` 参数也设定个默认值怎么办？写成这样好像可以：
+
+```python
+def say_hi(greeting='Hello', *names, capitalized=False):
+    for name in names:
+        if capitalized:
+            name = name.capitalize()
+        print(f'{greeting}, {name}!')
+
+say_hi('Hi', 'mike', 'john', 'zeo')
+say_hi('Welcome', 'mike', 'john', 'zeo', capitalized=True)
+```
+
+    Hi, mike!
+    Hi, john!
+    Hi, zeo!
+    
+    Welcome, Mike!
+    Welcome, John!
+    Welcome, Zeo!
+
+但 `greeting` 这个参数虽然有默认值，可这个函数在被调用的时候，还是必须要给出这个参数，否则输出结果出乎你的想象：
+
+```python
+def say_hi(greeting='Hello', *names, capitalized=False):
+    for name in names:
+        if capitalized:
+            name = name.capitalize()
+        print(f'{greeting}, {name}!')
+
+say_hi('mike', 'john', 'zeo')
+```
+
+    mike, john!
+    mike, zeo!
+
+设定了默认值的 `greeting`，竟然不像你想象的那样是 “可选参数”！所以，你得这样写：
+
+```python
+def say_hi(*names, greeting='Hello', capitalized=False):
+    for name in names:
+        if capitalized:
+            name = name.capitalize()
+        print(f'{greeting}, {name}!')
+
+say_hi('mike', 'john', 'zeo')
+say_hi('mike', 'john', 'zeo', greeting='Hi')
+```
+
+    Hello, mike!
+    Hello, john!
+    Hello, zeo!
+    Hi, mike!
+    Hi, john!
+    Hi, zeo!
+
+这是因为函数被调用时，面对许多参数，Python 需要按照既定的规则（即，顺序）判定每个参数究竟是哪一类型的参数：
+
+> **Order of Arguments**
+> 1. Positional
+> 1. Arbitrary Positional
+> 1. Keyword
+> 1. Arbitrary Keyword
+
+所以，即便你在定义里写成
+
+```python
+def say_hi(greeting='Hello', *names, capitalized=False):
+    ...
+```
+
+在调用该函数的时候，无论你写的是
+```python
+say_hi('Hi', 'mike', 'john', 'zeo')
+```
+
+还是
+```python
+say_hi('mike', 'john', 'zeo')
+```
+
+Python 都会认为接收到的第一个值是 Positional Argument —— 因为在定义中，`greeting` 被放到了 Arbitrary Positional Arguments 之前。
