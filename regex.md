@@ -1,4 +1,4 @@
-# 正则表达式（未完）
+# 正则表达式
 
 ## 正则表达式就是筛子
 
@@ -40,13 +40,23 @@
 - [a-zA-Z\*][0-9a-zA-Z\*]*可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是Python合法的变量
 - [a-zA-Z\*][0-9a-zA-Z\*]{0, 19}更精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）
 
-A|B可以匹配A或B，所以(P|p)ython可以匹配'Python'或者'python'
+`A|B`可以匹配A或B，所以`(P|p)ython`可以匹配'Python'或者'python'
 
-^表示行的开头，^\d表示必须以数字开头
+`^`表示行的开头，`^\d`表示必须以数字开头
 
-$表示行的结束，\d$表示必须以数字结束
+`$`表示行的结束，`\d$` 表示必须以数字结束
 
-你可能注意到了，py也可以匹配'python'，但是加上^py$就变成了整行匹配，就只能匹配'py'了
+你可能注意到了，`py`也可以匹配'python'，但是加上`^py$`就变成了整行匹配，就只能匹配'py'了
+
+可以在这里了解更加清晰的划分，有分类就好背：
+
+[正则表达式 – 语法 | 菜鸟教程](https://www.runoob.com/regexp/regexp-syntax.html)
+
+- 普通字符
+- 非打印字符
+- 特殊字符
+- 限定符
+- 
 
 ### 一个容易出错的地方
 
@@ -60,19 +70,33 @@ $表示行的结束，\d$表示必须以数字结束
 
 可以显示出你的每一个正则表达式的匹配含义，还能给你做结构分析。
 
-附上常见字符
-
-[Untitled](https://www.notion.so/dc41e80147f642d6a7cea0ddaff07c8e)
-
-[常用正则表达式](https://www.notion.so/2b566aece3f1482ab45a03e3546488d0)
-
-[正则表达式 – 语法 | 菜鸟教程](https://www.runoob.com/regexp/regexp-syntax.html)
 
 写复杂正则的一个常用方法，就是先把不相关的需求拆分开，分别写出对应的正则，然后组合，检一下相互的关联关系以及影响，基本上就可以得出对应的正则。
 
 ## 正则函数使用方法
 
-### 判断是否匹配字符串
+## 理解函数
+
+[re --- 正则表达式操作 — Python 3.7.4 文档](https://docs.python.org/zh-cn/3/library/re.html#module-contents)
+
+比较常用的函数：
+
+- re.compile()
+- re.match()
+- re.search()
+- re.split()
+
+注意 `re.match()``re.search()`的区别[re --- 正则表达式操作 — Python 3.7.4 文档](https://docs.python.org/zh-cn/3/library/re.html#search-vs-match)
+
+基于 re.match() 检查字符串开头，或者 re.search() 检查字符串的任意位置（默认Perl中的行为）
+
+且，多行模式中函数 match() 只匹配字符串的开始，但使用 search() 和以 '^' 开始的正则表达式会匹配每行的开始
+
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g5w4is346bj30bp04ljrp.jpg)
+
+## 具体用法
+
+### 匹配对象
 
 主要使用函数 re.match()
 
@@ -91,16 +115,36 @@ $表示行的结束，\d$表示必须以数字结束
         print('OK')
     else:
         print('failed')
+        
+![](https://ws4.sinaimg.cn/large/006tNc79ly1g5w3ud5x9tj30b4087aar.jpg)
+
+吐槽：只能这样判断吗？这样好慢啊。 
+
+#### 贪婪匹配与非贪婪匹配
+
+正则默认是贪婪匹配，也就是匹配尽可能多的字符。
+
+    re.match(r'(\d+)(0*)$', '102300').groups()
+    ('102300', '')
+    # 由于 \d+采取贪婪匹配，所以把后面的0全部匹配了，结果 0*只能匹配空字符了
+
+加个`?` 就能让 \d+ 采用非贪婪匹配。
+
+    `re.match(r'(\d+?)(0*)$', '102300').groups()`
+    
+![](https://ws4.sinaimg.cn/large/006tNc79ly1g5w430s1jrj30c301v74d.jpg)               
 
 ### 切分字符串
 
 用正则表达式切分字符串比用固定的字符更灵活，主要使用函数 re.split()
 
-    re.split(r'\s+','a  b c')
+`re.split(r'\s+','a  b c')`
+
+![](https://ws4.sinaimg.cn/large/006tNc79ly1g5w3wj8d7rj309901et8k.jpg)
 
 此部分看 cookbook 第二章有更详细的介绍
 
-### 分组
+### 分组提取文本
 
 除了简单的分组之外，正则表达式还有强大的提取子串的强大功能。用 `()` 表示的就是要提取的分组。
 
@@ -118,17 +162,7 @@ $表示行的结束，\d$表示必须以数字结束
 
 注意到`group(0)`永远是原始字符串，`group(1)`、`group(2)`……表示第1、2、……个子串。
 
-## 贪婪匹配
-
-正则默认是贪婪匹配，也就是匹配尽可能多的字符。
-
-    re.match(r'(\d+)(0*)$', '102300').groups()
-    ('102300', '')
-    # 由于 \d+采取贪婪匹配，所以把后面的0全部匹配了，结果 0*只能匹配空字符了
-
-加个`?` 就能让 \d+ 采用非贪婪匹配。
-
-    re.match(r'(\d+?)(0*)$', '102300').groups()
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g5w40sov2hj30ej042q35.jpg)
 
 ## 编译
 
@@ -143,14 +177,25 @@ $表示行的结束，\d$表示必须以数字结束
 
 要用到 re.compile() 函数
 
-    re_telephone = re.compile(r'^(\d{3})-(\d{3,8})$')
+    `re_telephone = re.compile(r'^(\d{3})-(\d{3,8})$')`
+    
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g5w486ypjdj30d80350sx.jpg)
 
-### re.match 和 re.search 的用法
+编译后的正则表达式对象支持以下方法和属性：[re --- 正则表达式操作 — Python 3.7.4 文档](https://docs.python.org/zh-cn/3/library/re.html#regular-expression-objects)
 
-search() vs match()
+## 练习
 
-`search` ⇒ find something anywhere in the string and return a match object.
+接下来就是不断不断练习啦，加油。
 
-`match` ⇒ find something at the *beginning* of the string and return a match object.
 
-在 search()下，用^，如果有分行符号则会匹配每一行的开头第一个字母，而 match 不会。
+## 参考文档
+
+- [Untitled](https://www.notion.so/dc41e80147f642d6a7cea0ddaff07c8e)
+- [常用正则表达式](https://www.notion.so/2b566aece3f1482ab45a03e3546488d0)
+- [正则表达式 – 语法 | 菜鸟教程](https://www.runoob.com/regexp/regexp-syntax.html)
+
+## changelog
+
+- 20190811 复习第一次
+- 201908 创建
+

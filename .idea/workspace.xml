@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jekyll.md" beforeDir="false" afterPath="$PROJECT_DIR$/Jekyll.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regex.md" beforeDir="false" afterPath="$PROJECT_DIR$/regex.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +21,10 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="ca0b8617-c25f-4f4c-a667-0729c02e8cce" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="245" />
-    <option name="y" value="29" />
-    <option name="width" value="640" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2244" />
+    <option name="y" value="34" />
+    <option name="width" value="1396" />
     <option name="height" value="732" />
   </component>
   <component name="ProjectView">
@@ -79,7 +81,7 @@
       <workItem from="1563894731829" duration="233000" />
       <workItem from="1563896630231" duration="82000" />
       <workItem from="1563980507743" duration="653000" />
-      <workItem from="1564307914209" duration="8356000" />
+      <workItem from="1564307914209" duration="9916000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -162,10 +164,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10899000" />
+    <option name="totallyTimeSpent" value="12459000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="245" y="29" width="640" height="732" extended-state="0" />
+    <frame x="2262" y="23" width="1396" height="732" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5585284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
