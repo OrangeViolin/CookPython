@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="" />
+    <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/高级特性.md" beforeDir="false" afterPath="$PROJECT_DIR$/高级特性.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +79,7 @@
       <workItem from="1563894731829" duration="233000" />
       <workItem from="1563896630231" duration="82000" />
       <workItem from="1563980507743" duration="653000" />
-      <workItem from="1564307914209" duration="13687000" />
+      <workItem from="1564307914209" duration="15329000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -160,7 +162,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16230000" />
+    <option name="totallyTimeSpent" value="17872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="136" y="37" width="1115" height="732" extended-state="0" />
