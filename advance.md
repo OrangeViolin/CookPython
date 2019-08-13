@@ -92,11 +92,57 @@ OS 模块：[os 模块 - Python 之旅 - 极客学院Wiki](https://wiki.jikexuey
 
 ## 生成器
 
+为什么需要有生成器？
+
+通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。
+
+所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间。在Python中，这种一边循环一边计算的机制，称为生成器：generator。
+
+要创建一个generator，有很多种方法。
+
+### 列表生成式改为生成器 
+
+第一种方法很简单，只要把一个列表生成式的[]改成()，就创建了一个generator：
+
+创建L和g的区别仅在于最外层的[]和()，L是一个list，而g是一个generator。
+
+我们可以直接打印出list的每一个元素，但我们怎么打印出generator的每一个元素呢？
+
+如果要一个一个打印出来，可以通过next()函数获得generator的下一个返回值
+
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g5y5xndmq1j30qs0gsjsv.jpg)
+
+generator保存的是算法，每次调用next(g)，就计算出g的下一个元素的值，直到计算到最后一个元素，没有更多的元素时，抛出StopIteration的错误。
+
+除了用 next 调用，用 for 循环更加方便。因为 generator 也是可迭代对象。
+
+![](https://ws3.sinaimg.cn/large/006tNc79ly1g5y61n6j6sj30la0du74x.jpg)
+
 自己去制作一个迭代器，就是生成器。
+
+### 用函数的方式生成
+
+generator非常强大。如果推算的算法比较复杂，用类似列表生成式的for循环无法实现的时候，还可以用函数来实现。
+
+比如注明的裴波那契数列
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1g5y6qhfjpwj30sc0eegmg.jpg)
+
+仔细观察，可以看出，fib函数实际上是定义了斐波拉契数列的推算规则，可以从第一个元素开始，推算出后续任意的元素，这种逻辑其实非常类似generator。
+
+也就是说，上面的函数和generator仅一步之遥。要把fib函数变成generator，只需要把print(b)改为yield b就可以了
+
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g5y6u46e63j30q80jywfu.jpg)
 
 如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个generator。
 
-![](https://ws2.sinaimg.cn/large/006tNc79ly1g5xa63r8oxj30oo0qwwgd.jpg)
+要理解generator的工作原理，它是在for循环的过程中不断计算出下一个元素，并在适当的条件结束for循环。对于函数改成的generator来说，遇到return语句或者执行到函数体最后一行语句，就是结束generator的指令，for循环随之结束。
+
+### 小练习不断输出杨辉三角
+
+还不太会
+
+![](https://ws4.sinaimg.cn/large/006tNc79ly1g5y747blk8j30nk0d0760.jpg)
 
 ## 迭代器
 
