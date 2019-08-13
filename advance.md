@@ -1,4 +1,4 @@
-# 高级特性
+# advance
 
 ## 切片
 
@@ -32,9 +32,63 @@ Iteration is a general term for taking each item of something, one after another
 
 当我们用一个循环（比如 for 循环）来遍历（一个一个处理）容器（比如列表，元组）中的元素时，这种遍历的过程就叫迭代。
 
-## 列表生成器
+## 列表生成器-do_listcompr
 
 为什么要生成列表？
+
+列表生成式，即 List Comprehensions，是 Python 内置的非常简单却强大的可以用来创建 list 的生成式。
+
+要生成 list `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]` 可以用 list(range(1,11))
+
+> 注意是 11 包含左边不包含右边
+
+但如果要生成`[1x1, 2x2, 3x3, ..., 10x10]`怎么做？
+
+可以使用循环，最后输出的是列表：
+
+用 print 函数，最后输出的是一个一个的对象。
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1g5y3w1v85fj30q60b43yz.jpg)
+
+要输出列表，可以考虑用 `append()` 用于在列表末尾添加新的对象。
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1g5y3xmgflxj30mq06imxg.jpg)
+
+循环太繁琐，列表生成式则可以用一行语句代替循环生成上面的 list：
+
+```
+[x*x for x in range(1,11)]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+把要生成的元素 `x*x`放在前面，后面跟 `for`循环，就可以把 list 创建出来，十分有用，多写几次，很快就可以熟悉这种语法。
+
+for 后面还可以加上 if 判断，这样我们就可以筛选出仅偶数的平放：
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1g5y4a5wn1sj30za07440p.jpg)
+
+运用列表生成式，可以写出非常简洁的代码。
+
+```
+import os
+[d for d in os.listdir('.')]
+['.DS_Store', '.git', '.idea', 'data_type.md', 'exe_booklist.md', 'exe_booklist.py', 'function-zip(*iterables).md', 'function.md', 'Git.md', 'Jekyll.md', 'Json.md', 'README.md', 'regex.md', 'shell.md', 'test_Function.py', 'zzh-oh-my-zzh.md', '极客时间编程学习目录.png', '高级特性.md']
+```
+
+`for`循环可以同时使用两个甚至多个变量。
+
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g5y4iqwlv3j30ka06kaag.jpg)
+
+那么用 列表生成器也是可以的。
+
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g5y4kg8z0ij30oo0a2gmh.jpg)
+
+items() 返回可遍历的（key，value）元组数组。[Python 字典(Dictionary) items()方法 | 菜鸟教程](https://www.runoob.com/python/att-dictionary-items.html) 
+
+元组中间是冒号，冒号，冒号
+
+### 拓展阅读
+
+OS 模块：[os 模块 - Python 之旅 - 极客学院Wiki](https://wiki.jikexueyuan.com/project/explore-python/File-Directory/os.html) 之后再看
 
 ## 生成器
 

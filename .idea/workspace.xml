@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/exe_booklist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/高级特性.md" beforeDir="false" afterPath="$PROJECT_DIR$/高级特性.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,7 +13,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exe_booklist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,9 +31,16 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="ca0b8617-c25f-4f4c-a667-0729c02e8cce" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/exe_booklist.py" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="136" />
-    <option name="y" value="37" />
+    <option name="y" value="23" />
     <option name="width" value="1115" />
     <option name="height" value="732" />
   </component>
@@ -79,7 +98,8 @@
       <workItem from="1563894731829" duration="233000" />
       <workItem from="1563896630231" duration="82000" />
       <workItem from="1563980507743" duration="653000" />
-      <workItem from="1564307914209" duration="15329000" />
+      <workItem from="1564307914209" duration="15871000" />
+      <workItem from="1565682602558" duration="2500000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -162,12 +182,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17872000" />
+    <option name="totallyTimeSpent" value="20914000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="136" y="37" width="1115" height="732" extended-state="0" />
+    <frame x="136" y="23" width="1115" height="732" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.5585284" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28704566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -182,7 +202,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016155" side_tool="true" weight="0.32852563" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.4983845" visible="true" weight="0.953125" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.4983845" visible="true" weight="0.771875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -215,6 +235,13 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exe_booklist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
