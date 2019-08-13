@@ -37,7 +37,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="136" />
     <option name="y" value="23" />
     <option name="width" value="1115" />
@@ -98,7 +98,7 @@
       <workItem from="1563896630231" duration="82000" />
       <workItem from="1563980507743" duration="653000" />
       <workItem from="1564307914209" duration="15871000" />
-      <workItem from="1565682602558" duration="4434000" />
+      <workItem from="1565682602558" duration="4501000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -181,10 +181,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22848000" />
+    <option name="totallyTimeSpent" value="22915000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="136" y="23" width="1115" height="732" extended-state="0" />
+    <frame x="136" y="23" width="1115" height="732" extended-state="1" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28704566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
