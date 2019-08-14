@@ -13,7 +13,9 @@
 
 ## 函数的定义
 
-**函数，实际上是可被调用的完整的程序。是带名字的代码块**它具备输入、处理、输出的功能。又因为它经常在主程序里被调用，所以它总像是个子程序。
+**函数，实际上是可被调用的完整的程序。是带名字的代码块(Python编程从入门到实践)**它具备输入、处理、输出的功能。又因为它经常在主程序里被调用，所以它总像是个子程序。
+
+函数就是最基本的一种代码抽象的方式。来源:[函数 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1016959663602400/1017105145133280)
 
 了解一个函数，无非是要了解两个方面
 
@@ -24,9 +26,9 @@
 
 当我们在用 python 编程的时候，更多情况下，我们只不过是在使用别人已经写好的函数，或者用更加专业一点的辞藻，叫做“已完好封装的函数”，而我们所需要的事情，通过阅读产品说明书了解如何使用产品。
 
-官方文档：[Built-in Functions — Python 3.7.4rc1 documentation](https://docs.python.org/3/library/functions.html)
+### 通过看官方文档了解函数
 
-如何看懂官方文档中对函数的说明？
+如何看懂官方文档中对函数的说明？以 print()函数为例。
 
 print(*object, sep=' ', end='\n', file=sys.stdout, flush=False)
 
@@ -49,15 +51,36 @@ print() 这个函数的返回值是 None 但向屏幕输出的内容即输入的
 
 在函数定义中，带有 = 的，即，已为其设定了默认值的参数，叫做 Keyword Arguments，其它的是 Positional Arguments。
 
-## 参数
+对 Python 内置的函数，可以查看官方文档详细了解：[Built-in Functions — Python 3.7.4rc1 documentation](https://docs.python.org/3/library/functions.html)
 
-一个完整的函数，要包含，输入，处理和输出。
+也可以在交互式命令行通过 `help（abs）`查看 `abs`函数的帮助信息。
 
-### 函数的取名
+一边看，一边多动手试试。
 
-一个函数内部什么都不干，也得有个名字，然后名字后面要加上圆括号（），以明示它是个函数，而不是某个变量。
+如果调用函数输入的参数数量不对，会返回 `TypeError`错误，并且会详细给你指出指引。一定要学会认真看指引。
 
-定义一个函数的关键字是 def（define 定义），圆括号内为空即一个什么都不干的函数。
+有了错误指引，搞不定就可以直接复制粘贴去 google ，很多问题其他人都解决过。
+
+### 函数的基本格式是什么？
+
+在Python中，定义一个函数要使用**def语句**，依次写出函数名、括号、括号中的参数和冒号:，然后，在缩进块中编写函数体，函数的返回值用`return`语句返回。
+
+首先，要有一个 def （define 定义）关键字，来告诉 Python 你要定义一个函数。
+
+def 后跟上函数的名字。函数取名规范参考变量的取名规范:
+
+- 名称不能以数字开头。能用在名称开头的有，大小写字母和下划线_
+- 其次，名称中不能有空格，要么使用下划线连接词汇，如do_nothing，要么使用驼峰命名
+- 再次，名称不能与关键词重合——以下是 python 中 Keyword List
+	![](https://ws1.sinaimg.cn/large/006tNc79ly1g5qag4sna6j30bw079wew.jpg)
+	
+变量名后跟着()，指出函数为完成其任务需要什么样的信息。一个函数内部什么都不干（）就为空，但必须带上，以明示它是个函数，而不是某个变量。
+
+()后面的:不要忘了，我经常忘记，提醒一下自己。
+
+冒号后面，紧跟着的所有缩进行构成了**函数体**。
+
+比如:
 
 ```
 def do_anything():
@@ -67,85 +90,23 @@ do_anything()
 call me
 ```
 
-参考变量的取名规范。
-
-- 名称不能以数字开头。能用在名称开头的有，大小写字母和下划线_
-- 其次，名称中不能有空格，要么使用下划线连接词汇，如do_nothing，要么使用驼峰命名
-- 再次，名称不能与关键词重合——以下是 python 中 Keyword List
-	![](https://ws1.sinaimg.cn/large/006tNc79ly1g5qag4sna6j30bw079wew.jpg)
-	
-	
-
-### 函数可以没有返回值
-
-函数内部，不一定非要有 return 语句。但如果函数内部并未定义返回值，那么函数的返回值是 None，当 None 被当做布尔值对待的时候，相当于是  False
-
-怎么知道函数是否有返回值？
-
-返回值简介
-
-- 简单介绍 print 和 return 的区别，print 仅仅是打印在控制台，而 return 则是将 return 后面的部分作为返回值作为函数的输出，可以用变量接走，继续使用该返回值做其它事。
-- 函数需要先定义后调用，函数体中 return 语句的结果就是返回值。如果一个函数没有 reutrn 语句，其实它有一个隐含的 return 语句，返回值是 None，类型也是 'NoneType'。
-- return 语句的作用：结束函数调用、返回值
-
-指定返回值与隐含返回值
-
-- 函数体中 return 语句有指定返回值时返回的就是其值
-- 函数体中没有 return 语句时，函数运行结束会隐含返回一个 None 作为返回值，类型是 NoneType，与 return 、return None 等效，都是返回 None。
+如果想定义一个什么也不做的函数，可以用 `pass`语句。
 
 ```
-def showplus(x):
-    print(x)
-    return x + 1
-
-num = showplus(6)
-add = num + 2
-print(add)
-
-输出结果：
-
-6
-9
+def nop():
+    pass
 ```
 
-为什么 第二行 num 的输出结果是 6，按道理说，showplus(6)是执行了 showplus(x)这个函数的结果赋值给 num，而 add 是 num 的结果加上 2，如果前一个结果是 6 那么为什么后一个结果是 9 而不是 8？
-
-![](https://ws2.sinaimg.cn/large/006tNc79ly1g5riybrmumj30ry0de3zk.jpg)
+ `pass`语句可以用来作为占位符，比如现在还没想好怎么写函数的代码，就可以先放一个 `pass`，让代码能够运行起来。如果少了 `pass` 代码运行就会有语法问题。
 
 
+## 参数：如何向函数传递信息
 
-我在代码里执行了一遍，发现可能是这样的
+一个完整的函数，要包含，输入，处理和输出。
 
-隐含 return None 举例：
+### 接收外部传递进来的值的例子
 
-```
-def showplus(x):
-    print(x)
-
-num = showplus(6)
-print(num)
-print(type(num)) 
-
-输出结果：
-6
-None
-<class 'NoneType'>
-
-```
-
-```
-def showplus(x):
-    print(x)
-    return x+1
-hey = showplus(8)
-8
-print(hey)
-9
-type(print(hey))
-9
-<class 'NoneType'>
-```
-## 接收外部传递进来的值
+在括号内添加参数，就可以让函数接受你给参数指定的任何职。
 
 写一个判断闰年年份的函数。
 
@@ -176,7 +137,7 @@ def fib_between(start, end):
     while a < end: #a 小于 end 开始执行
         if a >= start: #如果 a 大于 start 
             print(a, end=' ') # 输出结果
-        a, b = b, a + b # 这一行是什么？
+        a, b = b, a + b 
         
 fib_between(100, 10000)
 ```
@@ -184,7 +145,7 @@ fib_between(100, 10000)
 
 ```
 def fib_between(start, end):
-    r = [] #这一行也没看懂，为啥能这样定义？
+    r = [] 
     a, b = 0, 1
     while a < end:
         if a >= start:
@@ -195,7 +156,22 @@ def fib_between(start, end):
 fib_between(100, 10000)
 ```
 
-## 变量作用阈
+### 实参和形参
+
+很简单。
+
+```
+def is_leap(year):
+    return year % 4 ==0 and (year % 100 != 0 or year % 400 == 0)
+is_leap(300)
+```
+
+year 是形参
+300 是实参
+
+他们之间的关系是，在 `is_leap(300)` 中，将实参 300 存储在函数 `is_leap()` 的形参 year中。
+
+### 全局变量和局部变量
 
 ```
 def increase_one(n):
@@ -220,7 +196,11 @@ print(n)还是 1，为啥？
 
 然而，全局变量 n 的值并没有被改变，因为局部变量 n（它的值是 2）和全局变量 n（它的值还是 1）只不过是名字相同而已，但它们并不是同一个变量。
 
-## 可以接受一系列值的位置参数
+###  位置参数
+
+位置函数，根据顺序来传递实参。
+
+### 可以接受一系列值的位置参数
 
 如果你在定义参数的时候，在一个*位置参数*（Positional Arguments）前面标注了星号，`*`，那么，这个位置参数可以接收一系列值，在函数内部可以对这一系列值用 `for ... in ...` 循环进行逐一的处理。
 
@@ -264,7 +244,9 @@ say_hi(*names)
 
 
 
-## 为函数的某些参数设定默认值
+## 关键字参数
+
+为函数的某些参数设定默认值，简化函数的写法。
 
 可以在定义函数的时候，为某些参数设定默认值，这些有默认值的参数，又被称作关键字参数（Keyword Argumen）
 
@@ -274,7 +256,8 @@ say_hi(*names)
 
 以及，在第一次写的时候，我没有把`print()`放在`for name in names`这个条件语句下，所以 就没有办法循环了，注意位置呀！
 
-## 可以接受一系列之的关键字参数
+
+### 可以接受一系列之的关键字参数
 
 可以接收很多值的关键字参数（Arbitrary Keyword Argument）。
 
@@ -400,3 +383,25 @@ say_hi('mike', 'john', 'zeo')
 ```
 
 Python 都会认为接收到的第一个值是 Positional Argument —— 因为在定义中，`greeting` 被放到了 Arbitrary Positional Arguments 之前。
+
+## 返回值
+
+#### 函数可以没有返回值【有问题】
+
+函数体内部的语句在执行时，一旦执行到return时，函数就执行完毕，并将结果返回。因此，函数内部通过条件判断和循环可以实现非常复杂的逻辑。
+
+如果没有return语句，函数执行完毕后也会返回结果，只是结果为None，类型是 NoneType。
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1g5riybrmumj30ry0de3zk.jpg)
+
+为什么 第二行 `num = showplus(6)` 的输出结果是 6，按道理说，showplus(6)是执行了 showplus(x)这个函数的结果赋值给 num，而之后打印 num 结果又是 7。
+
+## 练习部分
+
+- 请定义一个函数quadratic(a, b, c)，接收3个参数，返回一元二次方程 ax^2+bx+c=0的两个解。
+
+## CHANGELOG
+ 
+ - 2019-08-04 继续增补
+ 
+
