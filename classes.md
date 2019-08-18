@@ -63,15 +63,77 @@ Class 使用 class 关键字进行定义。
 
 与函数定义不同的地方在于，Class 接收参数不是在 class Classname(): 的括号里完成 —— 那个圆括号有另外的用处。
 
-![](https://ws2.sinaimg.cn/large/006tNc79ly1g645o7v81nj311i09ewft.jpg)
 
-在 Python 中，首字母大写的名称指的是累。这个类定义中的括号是空的，因为我们要从空白创建这个类。
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g647xgw0xtj30zo0n877m.jpg)
 
-`__init__()` 类中的函数成为方法 Method，之前有关函数的一切都适用于方法。唯一重要的差别是调用方法的方式。`__init__()` 是一个特殊的方法，每当你根据 Gog 类创建新实例时，Python 都会自动运行它。是 Object 的初始化的过程。
+我们创建了一个 Class：
 
-在定义中， 形参 self 必不可少，它是一个**指向实例本身**的引用，让实例能够引用类中的属性和方法。
+```
+class Golem:
 
+    def __init__(self, name=None):
+        self.name = name
+        self.built_year = datetime.date.today().year
 
+```
 
+这里定义了，当我们根据这个 Class 创建一个 实例的时候，那个 Object 的初始化过程，即 __init__() 函数，这个函数是在 Class 中定义的，我们称它为 Class 的一个 Method。
 
+这里的 self 就是个变量，跟程序中其他变量的区别在于，它是一个系统默认可以识别的变量，**用来指代将来用这个 Class 创建的 Instance。** 这样，之后的 Instance 就可以调用 Class 中的方法。
+
+比如，我们创建了 Golem 这个 Class 的一个 Instance，g = Golem('Clay')之后，我们写 g.name,那么计时器就会去找 g 这个实例所在的 Scope 里面有没有 self.name
+
+在 Class 的代码中，如果定义了 `__init__()` 函数，那么系统就会将它当做 Instance 在创建后初始化的函数。这个函数名称是强制制定的，初始化函数必须使用这个名称。
+
+当我们用 g = Golem('Clay') 这一句创建了一个 Golem 的 Instance 的时候，以下一连串的事情发生了：
+
+- g 从此以后就是一个根据 Golem 这个 Class 创建的 Instance，**对使用者来说，它就是个 Object**
+- 因为 Golem 这个 Class 的代码中有 `__init__()`，所以，当 g 被创建的时候，g 就需要被初始化
+- 在 g 所在的变量目录中，出现了一个叫做 self 的用来替代 g 本身的变量
+- self.name 接受了一个参数，'Clay'，并将它保存下来
+- 生成了一个  self.built_year 的变量，其中保存的是 g 这个额 Object 被创建时的年份
+
+## Inheritance
+
+我们创建了一个 Golem Class ，如果我们相拥它 Inherite 一个新的 Class，比如，Running_Golem，一个能跑的机器人，那就像以下的代码那样做。
+
+注意 class Running_Golem 之后的圆括号：
+
+![](https://ws3.sinaimg.cn/large/006tNc79ly1g648fozli4j31140diaby.jpg)
+
+因为它是 Golem 的 Inheritance，那么 Golem 有的 Attributes 和 Methods 它都有，并且还多了一个 Method—— self.run。
+
+## Overrides
+
+当我们创建一个  Inherited Class 的时候，可以重写 Parent Class 中的 Methods。
+
+![](https://ws1.sinaimg.cn/large/006tNc79ly1g648kd9wasj31180f2gnj.jpg)
+
+## Inspecting A Class
+
+当我们作为用户想了解一个 Class 的 Interface，即，它的 Attributes 和 Methods 的时候，常用的三种方式：
+
+1. help(object)
+2. dir(object)
+3. object.___dict__
+
+![](https://ws2.sinaimg.cn/large/006tNc79ly1g648p6g7vdj311y0sq0w0.jpg)
+
+## Scope 
+
+ 每个变量都属于某一个 Scope（变量的作用域），在同一个我们先给 Golem 这个 Class 增加一点功能 —— 我们需要随时知道究竟有多少个 Golem 处于活跃状态…… 也因此顺带给 Golem 加上一个 Method：cease() —— 哈！机器人么，想关掉它，说关掉它，就能关掉它；
+
+另外，我们还要给机器人设置个使用年限，比如 10 年；
+
+…… 而外部会每隔一段时间，用 Golem.is_active() 去检查所有的机器人，所以，不需要外部额外操作，到了年头，它应该能关掉自己。—— 当然，又由于以下代码是简化书写的，核心目的是为了讲解 Scope，所以并没有专门写模拟 10 年后某些机器人自动关闭的情形……
+
+在运行以下代码之前，需要先介绍三个 Python 的内建函数：
+
+- hasattr(object, attr) 查询这个 object 中有没有这个 attr，返回布尔值
+- getattr(object, attr) 获取这个 object 中这个 attr 的值
+- setattr(object, attr, value) 将这个 object 中的 attr 值设置为 value
+
+## Changelog
+
+- 20190818 基本了解了 类 的概念
 
