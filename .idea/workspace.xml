@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data_type.md" beforeDir="false" afterPath="$PROJECT_DIR$/data_type.md" afterDir="false" />
-    </list>
+    <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +25,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="136" />
-    <option name="y" value="23" />
+    <option name="x" value="102" />
+    <option name="y" value="34" />
     <option name="width" value="1115" />
     <option name="height" value="719" />
   </component>
@@ -87,7 +85,7 @@
       <workItem from="1563896630231" duration="82000" />
       <workItem from="1563980507743" duration="653000" />
       <workItem from="1564307914209" duration="15871000" />
-      <workItem from="1565682602558" duration="9109000" />
+      <workItem from="1565682602558" duration="10831000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -170,10 +168,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27523000" />
+    <option name="totallyTimeSpent" value="29245000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="136" y="23" width="1115" height="719" extended-state="0" />
+    <frame x="128" y="77" width="1115" height="719" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28704566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
