@@ -1,12 +1,14 @@
 # 类——面向对象编程
 
-## 面向对象编程
+## 面向对象编程以及历史
 
 这不是专属于哪个编程语言（比如 Python、JavaScript 或者 Golang）
 
 面向对象编程（Object Orieneted Programming,OPP)是一种编程的范式（Paradigm），或者说，是一种方法论（Methodology）现代软件工程能做那么复杂的宏伟项目，基本上都得益于这个方法论的普及。
 
 【待深入了解】
+
+问题：什么是面向对象，什么是以对象为核心
 
 ## 争议
 
@@ -26,18 +28,11 @@ Paul Graham —— 就是那个著名的 Y-Combinator 的创始人 —— 也一
 
 【这些争议背后的原因，也想认认真真去看一看】
 
-## 基本术语
+## 基本术语以及术语之间的关系 
 
-- 对象
-- 封装
-- 抽象
-- 界面
-- 属性
-- 方法
-- 继承
-- 类
-- 子类
-- 实例
+- 对象、封装、抽象、界面
+- 属性、方法、继承
+- 类、子类、实例
 
 面向对象编程(OOP)，是使用**对象**(Objects)作为核心的编程方式，进而就可以把对象的数据和运算过程**封装**在内部，而外部仅能根据事先设计好的**界面**与之沟通。
 
@@ -57,7 +52,9 @@ Paul Graham —— 就是那个著名的 Y-Combinator 的创始人 —— 也一
 
 每当我们创建好一个类之后，我们就可以根据它创建许多个**实例（Instance）**，比如创建好了狗这个类，我们就可以根据这个类创建很多条狗，这好多条狗，就是狗这个类的实例。
 
-## Defining Class
+## 代码演示
+
+### Defining Class 使用类和实例
 
 Class 使用 class 关键字进行定义。
 
@@ -77,11 +74,11 @@ class Golem:
 
 ```
 
-这里定义了，当我们根据这个 Class 创建一个 实例的时候，那个 Object 的初始化过程，即 __init__() 函数，这个函数是在 Class 中定义的，我们称它为 Class 的一个 Method。
+这里定义了，当我们根据这个 Class 创建一个 实例的时候，那个 Object 的初始化过程，即 `__init__()` 函数，这个函数是在 Class 中定义的，我们称它为 Class 的一个 Method。
 
 这里的 self 就是个变量，跟程序中其他变量的区别在于，它是一个系统默认可以识别的变量，**用来指代将来用这个 Class 创建的 Instance。** 这样，之后的 Instance 就可以调用 Class 中的方法。
 
-比如，我们创建了 Golem 这个 Class 的一个 Instance，g = Golem('Clay')之后，我们写 g.name,那么计时器就会去找 g 这个实例所在的 Scope 里面有没有 self.name
+比如，我们创建了 Golem 这个 Class 的一个 Instance，g = Golem('Clay')之后，我们写 g.name,那么解释器就会去找 g 这个实例所在的 Scope 里面有没有 self.name
 
 在 Class 的代码中，如果定义了 `__init__()` 函数，那么系统就会将它当做 Instance 在创建后初始化的函数。这个函数名称是强制制定的，初始化函数必须使用这个名称。
 
@@ -93,7 +90,7 @@ class Golem:
 - self.name 接受了一个参数，'Clay'，并将它保存下来
 - 生成了一个  self.built_year 的变量，其中保存的是 g 这个额 Object 被创建时的年份
 
-## Inheritance
+## Inheritance 继承
 
 我们创建了一个 Golem Class ，如果我们相拥它 Inherite 一个新的 Class，比如，Running_Golem，一个能跑的机器人，那就像以下的代码那样做。
 
@@ -103,11 +100,14 @@ class Golem:
 
 因为它是 Golem 的 Inheritance，那么 Golem 有的 Attributes 和 Methods 它都有，并且还多了一个 Method—— self.run。
 
-## Overrides
+### Overrides 重写父类的方法
 
 当我们创建一个  Inherited Class 的时候，可以重写 Parent Class 中的 Methods。
 
 ![](https://ws1.sinaimg.cn/large/006tNc79ly1g648kd9wasj31180f2gnj.jpg)
+
+## 导入类
+
 
 ## Inspecting A Class
 
@@ -119,19 +119,7 @@ class Golem:
 
 ![](https://ws2.sinaimg.cn/large/006tNc79ly1g648p6g7vdj311y0sq0w0.jpg)
 
-## Scope 
 
- 每个变量都属于某一个 Scope（变量的作用域），在同一个我们先给 Golem 这个 Class 增加一点功能 —— 我们需要随时知道究竟有多少个 Golem 处于活跃状态…… 也因此顺带给 Golem 加上一个 Method：cease() —— 哈！机器人么，想关掉它，说关掉它，就能关掉它；
-
-另外，我们还要给机器人设置个使用年限，比如 10 年；
-
-…… 而外部会每隔一段时间，用 Golem.is_active() 去检查所有的机器人，所以，不需要外部额外操作，到了年头，它应该能关掉自己。—— 当然，又由于以下代码是简化书写的，核心目的是为了讲解 Scope，所以并没有专门写模拟 10 年后某些机器人自动关闭的情形……
-
-在运行以下代码之前，需要先介绍三个 Python 的内建函数：
-
-- hasattr(object, attr) 查询这个 object 中有没有这个 attr，返回布尔值
-- getattr(object, attr) 获取这个 object 中这个 attr 的值
-- setattr(object, attr, value) 将这个 object 中的 attr 值设置为 value
 
 ## Changelog
 
