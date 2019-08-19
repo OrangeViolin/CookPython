@@ -60,7 +60,6 @@ Class 使用 class 关键字进行定义。
 
 与函数定义不同的地方在于，Class 接收参数不是在 class Classname(): 的括号里完成 —— 那个圆括号有另外的用处。
 
-
 ![](https://ws1.sinaimg.cn/large/006tNc79ly1g647xgw0xtj30zo0n877m.jpg)
 
 我们创建了一个 Class：
@@ -73,10 +72,7 @@ class Golem:
         self.built_year = datetime.date.today().year
 
 ```
-
-这里定义了，当我们根据这个 Class 创建一个 实例的时候，那个 Object 的初始化过程，即 `__init__()` 函数，这个函数是在 Class 中定义的，我们称它为 Class 的一个 Method。
-
-这里的 self 就是个变量，跟程序中其他变量的区别在于，它是一个系统默认可以识别的变量，**用来指代将来用这个 Class 创建的 Instance。** 这样，之后的 Instance 就可以调用 Class 中的方法。
+self 就是个变量，**用来指代将来用这个 Class 创建的 Instance。** 
 
 比如，我们创建了 Golem 这个 Class 的一个 Instance，g = Golem('Clay')之后，我们写 g.name,那么解释器就会去找 g 这个实例所在的 Scope 里面有没有 self.name
 
@@ -89,6 +85,7 @@ class Golem:
 - 在 g 所在的变量目录中，出现了一个叫做 self 的用来替代 g 本身的变量
 - self.name 接受了一个参数，'Clay'，并将它保存下来
 - 生成了一个  self.built_year 的变量，其中保存的是 g 这个额 Object 被创建时的年份
+
 
 ## Inheritance 继承
 
