@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/The Python Standard Library/Data Types/2019-08-20 collections — Container datatypes.md" beforeDir="false" afterPath="$PROJECT_DIR$/The Python Standard Library/Data Types/2019-08-20 collections — Container datatypes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python3-cookbook/2019-08-19 数据结构和算法.md" beforeDir="false" afterPath="$PROJECT_DIR$/python3-cookbook/2019-08-19 数据结构和算法.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +26,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="433" />
     <option name="y" value="38" />
     <option name="width" value="1115" />
@@ -89,7 +88,7 @@
       <workItem from="1563980507743" duration="653000" />
       <workItem from="1564307914209" duration="15871000" />
       <workItem from="1565682602558" duration="11267000" />
-      <workItem from="1566287249662" duration="5422000" />
+      <workItem from="1566287249662" duration="6305000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -172,10 +171,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35103000" />
+    <option name="totallyTimeSpent" value="35986000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="433" y="38" width="1115" height="719" extended-state="0" />
+    <frame x="433" y="38" width="1115" height="719" extended-state="1" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29263747" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
