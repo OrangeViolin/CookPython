@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/python3-cookbook/2019-08-19 数据结构和算法.md" beforeDir="false" afterPath="$PROJECT_DIR$/python3-cookbook/2019-08-19 数据结构和算法.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/regex.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +27,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="433" />
-    <option name="y" value="38" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="122" />
+    <option name="y" value="27" />
     <option name="width" value="1115" />
     <option name="height" value="719" />
   </component>
@@ -88,7 +89,8 @@
       <workItem from="1563980507743" duration="653000" />
       <workItem from="1564307914209" duration="15871000" />
       <workItem from="1565682602558" duration="11267000" />
-      <workItem from="1566287249662" duration="6305000" />
+      <workItem from="1566287249662" duration="6380000" />
+      <workItem from="1566390592812" duration="1142000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -171,12 +173,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35986000" />
+    <option name="totallyTimeSpent" value="37203000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="433" y="38" width="1115" height="719" extended-state="1" />
+    <frame x="122" y="27" width="1115" height="719" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29263747" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29822928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -189,9 +191,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016155" side_tool="true" weight="0.32852563" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50232995" side_tool="true" weight="0.9521531" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.4983845" visible="true" weight="0.9521531" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49767008" visible="true" weight="0.9521531" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
