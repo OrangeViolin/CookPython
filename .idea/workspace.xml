@@ -4,7 +4,8 @@
     <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/2019-08-11-regex.md" beforeDir="false" afterPath="$PROJECT_DIR$/2019-08-11-regex.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2019-08-13 advance.md" beforeDir="false" afterPath="$PROJECT_DIR$/2019-08-13 advance.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019-08-21 字符串和文本.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-08-22 os — 操作系统接口模块.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-I-learnd-today.md" beforeDir="false" afterPath="$PROJECT_DIR$/what-I-learnd-today.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +29,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="28" />
     <option name="y" value="23" />
     <option name="width" value="1115" />
@@ -91,7 +92,7 @@
       <workItem from="1564307914209" duration="15871000" />
       <workItem from="1565682602558" duration="11267000" />
       <workItem from="1566287249662" duration="6380000" />
-      <workItem from="1566390592812" duration="5675000" />
+      <workItem from="1566390592812" duration="5955000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -174,10 +175,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41736000" />
+    <option name="totallyTimeSpent" value="42016000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="28" y="23" width="1115" height="719" extended-state="1" />
+    <frame x="28" y="23" width="1115" height="719" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29822928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
