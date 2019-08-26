@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2019-08-11-regex.md" beforeDir="false" afterPath="$PROJECT_DIR$/2019-08-11-regex.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019-08-13 advance.md" beforeDir="false" afterPath="$PROJECT_DIR$/2019-08-13 advance.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019-08-22 os — 操作系统接口模块.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/what-I-learnd-today.md" beforeDir="false" afterPath="$PROJECT_DIR$/what-I-learnd-today.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python3-cookbook/2019-08-21 字符串和文本.md" beforeDir="false" afterPath="$PROJECT_DIR$/python3-cookbook/2019-08-21 字符串和文本.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +13,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/exe_booklist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,7 +49,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -52,6 +60,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -92,7 +101,9 @@
       <workItem from="1564307914209" duration="15871000" />
       <workItem from="1565682602558" duration="11267000" />
       <workItem from="1566287249662" duration="6380000" />
-      <workItem from="1566390592812" duration="5955000" />
+      <workItem from="1566390592812" duration="6386000" />
+      <workItem from="1566483206661" duration="6000" />
+      <workItem from="1566810669860" duration="2743000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -175,12 +186,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42016000" />
+    <option name="totallyTimeSpent" value="45196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="23" width="1115" height="719" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29822928" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30941287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
