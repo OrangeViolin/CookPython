@@ -129,8 +129,6 @@ mysql> show databases;
 
 * 创建表使用`CREATE TABLE XXX`语句，而删除表使用`DROP TABLE XXX`语句
 
-## 写入数据
-
 ### 写入 sql 数据
 
 最开始可以用编造数据的方式来玩耍，[Mockaroo - Random Data Generator and API Mocking Tool | JSON / CSV / SQL / Excel](https://mockaroo.com/)
@@ -147,8 +145,6 @@ mysql> show databases;
 ### 写入 excel 数据
  
  [MySQL导入Excel表格中数据 - 简书](https://www.jianshu.com/p/af280cea4128)
-
-## 查询数据
 
 全局查询
 
@@ -199,13 +195,31 @@ WHERE columnname regexp '正则表达式'如：`SELECT * from MOCK_DATA WHERE id
 * 要修改birth列，例如把列名改为birthday，类型改为VARCHAR(20)：`ALTER TABLE students CHANGE COLUMN birth birthday VARCHAR(20) NOT NULL;`
 * 要删除列，使用：`ALTER TABLE students DROP COLUMN birthday;`
 
+### 原理补充
+
+![](https://tva1.sinaimg.cn/large/006y8mN6ly1g6x2jyxcgtj307p07ddfx.jpg)
+
+MySQL逻辑架构整体分为三层，最上层为客户端层，并非MySQL所独有，诸如：连接处理、授权认证、安全等功能均在这一层处理。
+
+MySQL大多数核心服务均在中间这一层，包括查询解析、分析、优化、缓存、内置函数(比如：时间、数学、加密等函数)。所有的跨存储引擎的功能也在这一层实现：存储过程、触发器、视图等。
+
+最下层为存储引擎，其负责MySQL中的数据存储和提取。和Linux下的文件系统类似，每种存储引擎都有其优势和劣势。中间的服务层通过API与存储引擎通信，这些API接口屏蔽了不同存储引擎间的差异。
+
+![](https://tva1.sinaimg.cn/large/006y8mN6ly1g6x2lw3kraj30xc0jjmyp.jpg)
+
+很多的查询优化工作实际上就是遵循一些原则让 MySQL 的优化器能够按照预想的合理方式运行而已。
+
+了解更多：[我必须得告诉大家的MySQL优化原理 - 简书](https://www.jianshu.com/p/d7665192aaaf)
+
+
 ## mysql 相关的资料
 
 [零基础如何自学MySQL数据库？ - 知乎](https://www.zhihu.com/question/34840297/answer/272185020)
 [mysql深入学习笔记及实战指南](http://www.notedeep.com/note/38/page/282)
+[MySQL索引背后的数据结构及算法原理 - 匠心零度博客](http://www.jiangxinlingdu.com/mysql/2018/12/19/B-Tree.html)
 
 ## change log
 
-- 2019-09-12 复习一遍查询语句的命令
+- 2019-09-12 复习一遍查询语句的命令，要深入理解原理估计还比较难，能先用起来就行
 - 2019-09-09 创建
 
