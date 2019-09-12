@@ -1,4 +1,4 @@
-# 2019-09-09 MySQL
+# 2019-09-09 SQL、MySQL and PostgreSQL
 
 
 ## 基本概念
@@ -66,7 +66,7 @@ MySQL 是最流行的开源关系数据库。
 
 BIGINT 能满足整数存储的需求，VARCHAR(N)能满足字符串存储的需求，这两种类型是使用最广泛的。
 
-### 主流数据库
+## 主流数据库
 
 目前，主流的关系数据库主要分为以下几类：
 
@@ -77,11 +77,19 @@ BIGINT 能满足整数存储的需求，VARCHAR(N)能满足字符串存储的需
 
 各自都有什么优缺点呢？
 
-### SQL 基本语句
+## PostgreSQL
 
-- DDL：Data Definition Language DDL允许用户定义数据，也就是创建表、删除表、修改表结构这些操作。通常，DDL由数据库管理员执行。
-- DML：Data Manipulation Language:DML为用户提供添加、删除、更新数据的能力，这些是应用程序对数据库的日常操作。
-- DQL：Data Query Language:DQL允许用户查询数据，这也是通常最频繁的数据库日常操作。
+### 安装 PostgreSQL
+
+根据系统选一个版本下载：https://www.enterprisedb.com/downloads/postgres-postgresql-downloads。
+
+下载、安装 pgAdmin - PostgreSQL Tools ，pgAdmin 是免费的 PostgreSQL 数据库管理工具，还有很多其他的数据库管理工具。[PostgreSQL: File Browser](https://www.postgresql.org/ftp/source/)
+
+发现还是没学会使用
+
+[PostgreSQL 语法 | 菜鸟教程](https://www.runoob.com/postgresql/postgresql-syntax.html)
+
+## MySQL
 
 ### 安装 MySQL
 
@@ -89,10 +97,14 @@ BIGINT 能满足整数存储的需求，VARCHAR(N)能满足字符串存储的需
 
 ### MySQL 最基本命令
 
-#### 进入数据库
+#### 进入以及连接数据库
 
 `PATH="$PATH":/usr/local/mysql/bin `
 `mysql -u root -p`
+
+注：现实中，管理登陆需要受到密切保护，因为对它的访问授予了创建表、删除整个数据库、更改登陆和口令等完全的权限。
+
+mysql administrator
 
 #### 创建与删除
 
@@ -115,25 +127,85 @@ mysql> show databases;
 * 删除数据库：`DROP DATABASE test;`
 * 切换到数据库：`USE test;`
 
-* 列出当前数据库的所有表，使用命令：`SHOW TABLES;`
-* 查看一个表的结构：`DESC XXXX;`
-* 查看创建表的SQL语句:`SHOW CREATE TABLE XXXX;`
 * 创建表使用`CREATE TABLE XXX`语句，而删除表使用`DROP TABLE XXX`语句
 
-### 查询数据
+## 写入数据
 
-- 基本查询：`SELECT * FROM <表名>` `SELECT`是关键字，表示将要执行一个查询，`*`表示“所有列”，`FROM`表示将要从哪个表查询,SELECT可以用作计算,SELECT查询的结果是一个二维表。
-- 条件查询：`SELECT * FROM <表名> WHERE <条件表达式>`SELECT语句可以通过WHERE条件来设定查询条件,`SELECT * FROM students WHERE score >= 80;` 条件可以用 AND 连起来，`<条件1> AND <条件2>` 还可以用 `OR`；表达式中，注意 使用<>判断不相等，使用LIKE判断相似，%可以表示任意字符
+### 写入 sql 数据
+
+最开始可以用编造数据的方式来玩耍，[Mockaroo - Random Data Generator and API Mocking Tool | JSON / CSV / SQL / Excel](https://mockaroo.com/)
+
+下载了数据之后。
+
+- 用`quit`退出 mysql 执行界面
+- mysql -u root -p databasename（数据库名） < E:\MySQL\dataname.sql（文件地址）
+ 
+ 输入密码之后就完成了数据导入。
+ 
+ 进入 mysql 之后查询表格即可获取表格。
+ 
+### 写入 excel 数据
+ 
+ [MySQL导入Excel表格中数据 - 简书](https://www.jianshu.com/p/af280cea4128)
+
+## 查询数据
+
+全局查询
+
+* 列出当前数据库的所有表，使用命令：`SHOW TABLES;`
+* 查看一个表的结构：`DESC XXXX;` 了解字段，数据类型
+* 查看创建表的SQL语句:`SHOW CREATE TABLE XXXX;`
+
+### SELECT 语句
+
+`SELECT`是关键字，表示将要执行一个查询，`FROM`表示将要从哪个表查询
+
+- `SELECT * FROM <表名>` ，`*`表示“所有列”,SELECT可以用作计算,SELECT查询的结果是一个二维表。
+- `SELECT <columnname> FROM <表名>`
 
 还有其他：投影查询、排序、分页查询、聚合查询、多表查询、连接查询等详见：[连接查询 - 廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1177760294764384/1179610888796448)
 
-### 修改数据
+### 排序数据
+
+ORDER BY <columnname> 以某一列字母排序，也可以按照多个列排序，只需要用逗号进行分隔。
+
+### 过滤数据
+
+WHERE 语句
+
+- `SELECT * FROM <表名> WHERE <条件表达式>`SELECT语句可以通过WHERE条件来设定查询条件,`SELECT * FROM students WHERE score >= 80;` 
+- 条件可以用 AND 连起来，`<条件1> AND <条件2>` 还可以用 `OR`；注意，在执行时，先操作 and 条件，再操作 or 条件
+- 表达式中，注意 使用<>判断不相等
+- between 和 IN `WHERE in (范围)` 匹配范围值，其中包括开始值以及结束值
+- 用 is null 来检查空值
+- 使用LIKE判断相似，%可以表示任意字符
+
+注意：在 mysql 中默认不区分大小写。
+
+### 搜索数据
+
+用正则表达式进行搜索
+
+WHERE columnname regexp '正则表达式'如：`SELECT * from MOCK_DATA WHERE id regexp '80';`
+
+正则表达式在 mysql 中只能运用一小部分
+
+- | 表示 or，匹配其中之一
+- [] 匹配几个字符之一，比如 [123]匹配1或者2或者3
+
+## 修改数据
 
 * 修改表就比较复杂。如果要给students表新增一列birth，使用：`ALTER TABLE students ADD COLUMN birth VARCHAR(10) NOT NULL;`
 * 要修改birth列，例如把列名改为birthday，类型改为VARCHAR(20)：`ALTER TABLE students CHANGE COLUMN birth birthday VARCHAR(20) NOT NULL;`
 * 要删除列，使用：`ALTER TABLE students DROP COLUMN birthday;`
 
+## mysql 相关的资料
+
+[零基础如何自学MySQL数据库？ - 知乎](https://www.zhihu.com/question/34840297/answer/272185020)
+[mysql深入学习笔记及实战指南](http://www.notedeep.com/note/38/page/282)
+
 ## change log
 
+- 2019-09-12 复习一遍查询语句的命令
 - 2019-09-09 创建
 
