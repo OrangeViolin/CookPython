@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="add Function">
-      <change afterPath="$PROJECT_DIR$/flasktest/hello.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019-09-17 Flask.md" beforeDir="false" afterPath="$PROJECT_DIR$/2019-09-17 Flask.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flasktest/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/flasktest/Pipfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flasktest/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flasktest/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-08-27 IO.md" beforeDir="false" afterPath="$PROJECT_DIR$/2019-08-27 IO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-09-17 Pipenv .md" beforeDir="false" afterPath="$PROJECT_DIR$/2019-09-17 Pipenv .md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jekyll.md" beforeDir="false" afterPath="$PROJECT_DIR$/Jekyll.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The Python Standard Library/内置函数/2019-08-27 open().md" beforeDir="false" afterPath="$PROJECT_DIR$/The Python Standard Library/内置函数/2019-08-27 open().md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,87 +14,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CookPython" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exe_booklist.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_code/zhadanchaoren_game.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flasktest/hello.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_code/cfg.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Games/Game19/Game19.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Games/Game5/Game5.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2220">
-              <caret line="155" column="12" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Games/Game5/home.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Games/Game5/scene.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Games/Game5/bullet.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Games/Game5/food.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -123,11 +47,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="467" />
-    <option name="y" value="23" />
-    <option name="width" value="1112" />
-    <option name="height" value="719" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="436" />
+    <option name="width" value="688" />
+    <option name="height" value="364" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -143,11 +66,6 @@
             <path>
               <item name="CookPython" type="b2602c69:ProjectViewProjectNode" />
               <item name="CookPython" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CookPython" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CookPython" type="462c0819:PsiDirectoryNode" />
-              <item name="flasktest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -282,7 +200,8 @@
       <workItem from="1567176101595" duration="635000" />
       <workItem from="1567513215148" duration="7832000" />
       <workItem from="1568292427637" duration="1220000" />
-      <workItem from="1568302967290" duration="8291000" />
+      <workItem from="1568302967290" duration="8517000" />
+      <workItem from="1568895080568" duration="4662000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -365,7 +284,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74249000" />
+    <option name="totallyTimeSpent" value="79137000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -377,9 +296,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="467" y="23" width="1112" height="719" extended-state="1" />
+    <frame x="0" y="436" width="688" height="364" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.335514" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.5665635" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24953271" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32990655" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32854864" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32854864" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854864" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048465" side_tool="true" weight="0.9529042" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" weight="0.32854864" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.4951535" visible="true" weight="0.8897059" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.335514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -393,7 +337,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854864" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048465" side_tool="true" weight="0.9529042" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" visible="true" weight="0.32854864" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" visible="true" weight="0.32854864" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4951535" weight="0.9521531" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -402,7 +346,7 @@
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -446,13 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_code/cfg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Games/Game19/Game19.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -460,20 +397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Games/Game5/Game5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="155" column="12" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Games/Game5/home.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../Games/Game5/bullet.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Games/Game5/food.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../Games/Game5/scene.py">
@@ -503,6 +430,23 @@
           <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Games/Game5/Game5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="155" column="12" selection-start-line="155" selection-start-column="10" selection-end-line="155" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_code/cfg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Games/Game5/food.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/flasktest/hello.py">
       <provider selected="true" editor-type-id="text-editor">
