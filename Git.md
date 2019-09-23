@@ -369,6 +369,33 @@ $ git commit -m "say it again"
 ```
 -m 就是用来指定 
 
+## 让命令行记住 github 密码
+
+记住密码之后不用再重复输入
+
+- 在命令行输入命令:
+  `git config --global credential.helper store`
+   ☞ 这一步会在用户目录下的.gitconfig文件最后添加:
+   ```
+    [credential]
+        helper = store
+    ```
+- 现在push你的代码 (git push), 这时会让你输入用户名密码, 这一步输入的用户名密码会被记住, 下次再push代码时就不用输入用户名密码啦!
+  ☞这一步会在用户目录下生成文件.git-credential记录用户名密码的信息.
+  ☞ git config --global 命令实际上在操作用户目录下的.gitconfig文件, 我们cat一下此文件(cat .gitconfig), 其内容如下:
+    ```
+    [user]
+        name = alice
+        email = alice@aol.com
+    [push]
+        default = simple
+    [credential]
+        helper = store
+    ```
+git config --global user.email "alice@aol.com" 操作的就是上面的email
+git config --global push.default matching 操作的就是上面的push段中的default字段
+git config --global credential.helper store 操作的就是上面最后一行的值
+
 ## CHANGELOG
 
 - 20190904 补上了git 的官方介绍，认为之前太过于详细的细节了
