@@ -62,7 +62,7 @@ oh-my-zsh开源地址：https://github.com/robbyrussell/oh-my-zsh
   - `./install`
   - 打开配置文件，把 ZSH_THEME 后面的字段改为 agnoster
     - 首先打开iTerm,切到文件所在的文件夹目录下
-      - cd xx 然后进入编辑模式vim xx.xx
+      - cd xx 然后进入编辑模式vim ~/.zshrc
       - 然后插入修改 shift + i
       - 修改之后退出插入模式 esc
       - 保存退出 ZZ
