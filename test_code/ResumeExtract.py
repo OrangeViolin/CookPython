@@ -16,6 +16,9 @@ print(domain)
 file_names = os.listdir('/Users/caibaomei/CookPython/test_code/board') #读取文件的名字
 for info in file_names:
     file_path = os.path.join(domain, info) #把文件的名字和文件路径合并起来
-    json_framedata = pd.read_json(file_path, orient='index')
+    global json_framedata
+    json_framedata = pd.read_json(file_path, orient='index', typ='frame')
     print(json_framedata)
 
+json_framedata.loc['code']
+json_framedata.loc['directors']

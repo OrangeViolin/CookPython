@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5b2198-ecb0-4161-aea8-e0b320492f93" name="Default Changelist" comment="add Function">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019-09-26 pandas.md" beforeDir="false" afterPath="$PROJECT_DIR$/2019-09-26 pandas.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_code/2019-09-26 ResumeExtract.md" beforeDir="false" afterPath="$PROJECT_DIR$/test_code/2019-09-26 ResumeExtract.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_code/ResumeExtract.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/test_code/ResumeExtract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_code/ResumeExtract.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_code/ResumeExtract.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/what-I-learnd-today.md" beforeDir="false" afterPath="$PROJECT_DIR$/what-I-learnd-today.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,14 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_code/ResumeExtract.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../.jupyter/jupyter_notebook_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#25#44#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="200">
+              <caret line="213" column="82" lean-forward="true" selection-start-line="213" selection-end-line="213" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -66,6 +63,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_code/ResumeExtract.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding>
+                <element signature="e#25#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -73,6 +82,7 @@
       <find>xt</find>
       <find>iron</find>
       <find>关卡</find>
+      <find>dir</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,6 +106,7 @@
         <option value="$PROJECT_DIR$/test_code/jikebangcourse" />
         <option value="$PROJECT_DIR$/test_code/pandas_test.py" />
         <option value="$PROJECT_DIR$/test_code/ResumeExtract.py" />
+        <option value="$PROJECT_DIR$/../.jupyter/jupyter_notebook_config.py" />
       </list>
     </option>
   </component>
@@ -316,7 +327,7 @@
       <workItem from="1568895080568" duration="5716000" />
       <workItem from="1569136092524" duration="4344000" />
       <workItem from="1569554639397" duration="3811000" />
-      <workItem from="1569563326157" duration="2038000" />
+      <workItem from="1569563326157" duration="4374000" />
     </task>
     <task id="LOCAL-00001" summary="add new file">
       <created>1563891710199</created>
@@ -399,7 +410,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90384000" />
+    <option name="totallyTimeSpent" value="92720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -419,7 +430,7 @@
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32990655" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4949349" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.085383505" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.658466" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -429,7 +440,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048465" side_tool="true" weight="0.9529042" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49919224" weight="0.32850942" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4951535" weight="0.30745342" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4951535" weight="0.30680174" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -494,7 +505,7 @@
     <SUITE FILE_PATH="coverage/CookPython$jikebangcourse.coverage" NAME="jikebangcourse Coverage Results" MODIFIED="1569141874934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_code" />
     <SUITE FILE_PATH="coverage/CookPython$score_name.coverage" NAME="score_name Coverage Results" MODIFIED="1568727085920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_code" />
     <SUITE FILE_PATH="coverage/CookPython$fastestframe.coverage" NAME="fastestframe Coverage Results" MODIFIED="1568903613006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flasktest" />
-    <SUITE FILE_PATH="coverage/CookPython$ResumeExtract.coverage" NAME="ResumeExtract Coverage Results" MODIFIED="1569577467150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_code" />
+    <SUITE FILE_PATH="coverage/CookPython$ResumeExtract.coverage" NAME="ResumeExtract Coverage Results" MODIFIED="1569652478331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_code" />
     <SUITE FILE_PATH="coverage/CookPython$pandas_test.coverage" NAME="pandas_test Coverage Results" MODIFIED="1569554724218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_code" />
   </component>
   <component name="editorHistoryManager">
@@ -575,17 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_code/ResumeExtract.py">
-      <provider editor-type-id="jupyter-editor" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#25#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../.pyenv/versions/3.7.3/lib/python3.7/site-packages/pandas/io/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2895">
@@ -611,6 +611,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26355">
           <caret line="1757" selection-start-line="1757" selection-end-line="1757" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.jupyter/jupyter_notebook_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="213" column="82" lean-forward="true" selection-start-line="213" selection-end-line="213" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_code/ResumeExtract.py">
+      <provider editor-type-id="jupyter-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="e#25#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
